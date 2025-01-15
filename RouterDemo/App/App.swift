@@ -17,9 +17,13 @@ class App { // root
     }
     
     func start() {
+        
         let rootNavigationController = UINavigationController()
         self.window.rootViewController = rootNavigationController
+        
         let rootVC = Container.homeServiceDI(navigationController: rootNavigationController)
         rootNavigationController.setViewControllers([rootVC], animated: true)
+        
+        window.makeKeyAndVisible()
     }
 }
